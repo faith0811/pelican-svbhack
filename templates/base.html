@@ -37,14 +37,10 @@
   <aside>
     <div id="user_meta">
       <a href="{{ SITEURL }}">
-        {% if USER_LOGO_URL %}
-        <img src="{{ USER_LOGO_URL }}" alt="logo">
-        {% else %}
-        <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
-        {% endif %}
+	<img id="author_logo" src="" alt="logo">
       </a>
-      <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
-      <p>{{ TAGLINE }}</p>
+      <h2><a id="author_name" href="{{ SITEURL }}"></a></h2>
+      <p id="author_tagline"></p>
       <ul>
         {% for title, link in MENUITEMS %}
         <li><a href="{{ link }}">{{ title }}</a></li>
@@ -88,5 +84,6 @@
     </div>
   </main>
   {% include "modules/idl.html" %}
+  <script src="{{ SITEURL }}/theme/js/main.js" type="text/javascript"></script>
 </body>
 </html>
